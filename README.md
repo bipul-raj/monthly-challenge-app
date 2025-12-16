@@ -5,7 +5,7 @@ This project provides CRUD operations (Create, Read, Update, Delete) for monthly
 
 ---
 
-## 🚀 Features
+## Features
 - Create a monthly challenge
 - Retrieve all challenges
 - Retrieve a challenge by month
@@ -14,7 +14,7 @@ This project provides CRUD operations (Create, Read, Update, Delete) for monthly
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - Java
 - Spring Boot
 - Spring Web (REST APIs)
@@ -23,26 +23,23 @@ This project provides CRUD operations (Create, Read, Update, Delete) for monthly
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
-src/main/java/com/springboot/restapis/monthlyChallengeApp
-├── controller
-│ └── ChallengeController.java
-├── services
-│ └── ChallengeService.java
+src/main/java/com/springboot/restapis/monthlyChallengeApp  
+├── controller  
+│ └── ChallengeController.java  
+├── services  
+│ └── ChallengeService.java  
 └── MonthlyChallengeAppApplication.java
-
-
 
 ---
 
-## 📌 API Endpoints
+## API Endpoints
 
-### Get all challenges
+Get all challenges  
+GET /challenges  
 
-
-**Response**
-```json
+Response:  
 [
   {
     "id": 1,
@@ -51,63 +48,71 @@ src/main/java/com/springboot/restapis/monthlyChallengeApp
   }
 ]
 
---- Get challenge by month
-GET /challenges/{month}
+Get challenge by month  
+GET /challenges/{month}  
 
-Example:
+Example:  
 GET /challenges/January
 
-➤ Create a challenge
-create challenge
+Create a challenge  
+POST /challenges  
 
-Request Body
-POST /challenges
+Request Body:  
 {
   "month": "January",
   "description": "Learn Spring Boot"
 }
 
-➤ Update a challenge
-PUT /challenges/{id}
+Update a challenge  
+PUT /challenges/{id}  
 
-Request Body
-request body
+Request Body:  
 {
   "month": "February",
   "description": "Build REST APIs"
 }
 
-➤ Delete a challenge
+Delete a challenge  
 DELETE /challenges/{id}
 
-How to Run the Application:
+---
 
-1. Prerequisites
-    Java 8 or above
-    Maven
+## How to Run the Application
 
-2. Steps
-Clone the repository
-git clone https://github.com/bipul-raj/monthly-challenge-app.git
+Prerequisites:  
+- Java 8 or above  
+- Maven  
 
-3. Navigate to the project directory
-cd monthly-challenge-app
+Steps:  
+1. Clone the repository  
+git clone https://github.com/bipul-raj/monthly-challenge-app.git  
 
-4. Run the application
-mvn spring-boot:run
+2. Navigate to the project directory  
+cd monthly-challenge-app  
 
-The application will start on:
+3. Run the application  
+mvn spring-boot:run  
+
+The application will start on:  
 http://localhost:8080
 
----------------------------------------------------
-Testing the APIs:
-Postman
-cURL
-Browser (for GET requests)
+---
 
-------------------------------------------------------
-Future Enhancements:
-Integrate database using Spring Data JPA
-Add Swagger / OpenAPI documentation
-Add global exception handling
-Add validation and unit tests
+## Testing the APIs
+- Postman  
+- cURL  
+- Browser (for GET requests)
+
+---
+
+## Future Enhancements
+- Integrate database using Spring Data JPA  
+- Add Swagger / OpenAPI documentation  
+- Add global exception handling  
+- Add validation and unit tests
+
+---
+
+## Author
+Bipul Raj  
+Java Backend Developer
