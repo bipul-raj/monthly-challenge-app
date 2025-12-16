@@ -51,7 +51,7 @@ src/main/java/com/springboot/restapis/monthlyChallengeApp
   }
 ]
 
-➤ Get challenge by month
+--- Get challenge by month
 GET /challenges/{month}
 
 Example:
