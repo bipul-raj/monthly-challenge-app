@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -50,9 +51,19 @@ public class ChallengeController {
 	public ResponseEntity<String> updateMonthlyChallenge(@PathVariable Long id, @RequestBody Challenge updatedChallenge) {
 		boolean isChallengeUpdated= challengeService.updateMonthlyChallenge(id,updatedChallenge);
 		if(isChallengeUpdated) {
-			return new ResponseEntity("Challenge updated successfully",HttpStatus.OK);
+			return new ResponseEntity<>("Challenge updated successfully",HttpStatus.OK);
 		}
-		else return new ResponseEntity("Challenge is not updated",HttpStatus.NOT_FOUND); 
+		else return new ResponseEntity<>("Challenge is not updated",HttpStatus.NOT_FOUND); 
+	}
+	
+	@DeleteMapping("/challenges/{id}")
+	public ResponseEntity<String> deleteMonthlyChallenge(@PathVariable Long id) {
+		boolean isChallengeDeleted= challengeService.deleteMonthlyChallenge(id);
+		
+		if(isChallengeDeleted) {
+			return new ResponseEntity<>("Challenge deleted successfully",HttpStatus.OK);
+		}
+		else return new ResponseEntity<>("Challenge is not deleted",HttpStatus.NOT_FOUND);
 	}
 
 }

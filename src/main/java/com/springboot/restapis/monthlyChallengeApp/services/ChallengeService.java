@@ -51,4 +51,8 @@ public class ChallengeService {
 		return false;
 	}
 
+	public boolean deleteMonthlyChallenge(Long id) {
+		return challenges.removeIf(challenge-> challenge.getId().equals(id));
+	}
+
 }
