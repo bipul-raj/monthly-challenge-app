@@ -50,31 +50,36 @@ src/main/java/com/springboot/restapis/monthlyChallengeApp
     "description": "Learn Spring Boot"
   }
 ]
+
+➤ Get challenge by month
 GET /challenges/{month}
-exmaple
+
+Example:
 GET /challenges/January
 
+➤ Create a challenge
 create challenge
+
+Request Body
 POST /challenges
 {
   "month": "January",
   "description": "Learn Spring Boot"
 }
 
-update challenge
+➤ Update a challenge
 PUT /challenges/{id}
 
+Request Body
 request body
 {
   "month": "February",
   "description": "Build REST APIs"
 }
 
-delete challenge
+➤ Delete a challenge
 DELETE /challenges/{id}
 
-
-------------------------------------------
 How to Run the Application:
 
 1. Prerequisites
